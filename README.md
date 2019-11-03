@@ -5,26 +5,10 @@ Real - Estate - Monopoly
 Getting Started
 -----
 
+Since the back-end and the front-end are not connected yet, you will need to run them individually.
 
-You can also get started with this app via server by: cloning the `RealEstateApp`.
-```
-git clone git@github.com:hydeiablakey/real_estate_monopoly.git && cd realestateapp
-```
-Installing the Dependencies:
-```
-npm install or npm i
-```
-Begin Running the Application:
-```
-npm start
-```
+## Steps
+1. Go to your terminal and type: `git clone https://github.com/hydeiablakey/real_estate_monopoly.git`
 
-Afterwards you should be ready to start using and running the Real estate app here: [localhost:3000/](http://localhost:3000/)
-
-Dependencies 
------
-```
-
-
-```
-
+2. Then type: `cd font-end` or `cd back-end`
+3. Then read the *README.md* file inside the folder you `cd` into to continue.
