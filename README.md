@@ -11,7 +11,7 @@ git clone https://github.com/hydeiablakey/real_estate_monopoly.git
 After cloning, cd into the associated real_estate_monopoly folder:
 
 ```
-cd real_estate_monopoly
+cd real_estate_monopoly && cd front-end
 ```
 
 Install the Dependencies:
