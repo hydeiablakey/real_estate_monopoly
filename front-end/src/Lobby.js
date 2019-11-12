@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-export default class Login extends Component {
+export default class Lobby extends Component {
 	render() {
 		return (
             <div>
