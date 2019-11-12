@@ -21,7 +21,7 @@ npm install or npm i
 
 Begin Running the Application:
 ```
-npm run dev 
+npm start 
 ```
 
-Afterwards you should be ready to start using and running the real_estate_monopoly app here: [localhost:8080/](http://localhost:8080/)
+Afterwards you should be ready to start using and running the real_estate_monopoly app here: [localhost:3000/](http://localhost:3000/)
