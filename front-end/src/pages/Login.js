@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
+import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 
 export default class Login extends Component {
 	render() {
 		return (
-            <div>
-                This is a login. 
-            </div>
+		<div className="formLogin">
+		  <Container>
+			<Form>
+				<FormGroup>
+					<Label for="userInput">Username</Label>
+					<Input type="username" name="username" id="userName" placeholder="Enter Username" />
+				</FormGroup>
+				<FormGroup>
+					<Label for="passwordInput">Password</Label>
+					<Input type="password" name="password" id="userPassword" placeholder="Enter Password" />
+				</FormGroup>
+				<Button>Login</Button>
+			</Form>
+		   </Container>
+		</div>
+
 		)
 	}
 }

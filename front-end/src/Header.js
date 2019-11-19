@@ -4,8 +4,6 @@ import { NavLink as Link } from 'react-router-dom';
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
 export default class Header extends Component {
-
-
     constructor(props) {
         super(props);
 
@@ -21,7 +19,6 @@ export default class Header extends Component {
         });
     }
 
-
     render() {
         return (
             <div>
@@ -29,8 +26,6 @@ export default class Header extends Component {
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
-
-
                             <NavItem>
                                 <NavLink tag={Link} exact to="/"> Home </NavLink>
                             </NavItem>

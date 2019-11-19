@@ -1,12 +1,33 @@
 import React, { Component } from 'react';
-
+import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 export default class Signup extends Component {
 	render() {
 		return (
-            <div>
-                This is a signup page. 
-            </div>
+			<div className="formSignup">
+			<Container>
+			<Form>
+				<FormGroup>
+					<Label for="userInput">Username</Label>
+					<Input type="username" name="username" id="signupUsername" placeholder="JohnDoexxx" />
+				</FormGroup>
+				<FormGroup>
+					<Label for="emailInput">Email</Label>
+					<Input type="email" name="email" id="signupEmail" placeholder="johndoexxx@mail.com" />
+				</FormGroup>
+				<FormGroup>
+					<Label for="passwordInput">Password</Label>
+					<Input type="password" name="password" id="signupPassword" placeholder="Enter Password" />
+				</FormGroup>
+				<FormGroup>
+					<Label for="passwordInput">Confirm password</Label>
+					<Input type="password" name="password" id="signupPassword2" placeholder="Re-enter password" />
+				</FormGroup>
+				<Button>Sign up</Button>
+
+				</Form>
+				</Container>
+		</div>
 		)
 	}
 }
