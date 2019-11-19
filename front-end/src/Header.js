@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem} from 'react-bootstrap';
-import { NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom'; 
 
 export default class Header extends Component {
     render() {
@@ -13,28 +13,28 @@ export default class Header extends Component {
         
                        
         <NavItem>
-            <NavLink exact to="/" className="inactive" activeClassName="active">
+            <Link to={"/game"} className="inactive" activeClassName="active">
             <h3>Game</h3>
-            </NavLink>
+            </Link>
          </NavItem>
 
         <NavItem>
-            <NavLink  to="/Login" className="inactive" activeClassName="active">
+            <Link  to={"/login"} className="inactive" activeClassName="active">
             <h3>Login </h3>
-            </NavLink>
+            </Link>
         </NavItem>
                         
                         
         <NavItem>
-            <NavLink  to="/Signup" className="inactive" activeClassName="active">
+            <Link  to={"/Signup"} className="inactive" activeClassName="active">
             <h3>Signup</h3>
-            </NavLink>
+            </Link>
         </NavItem>
                         
         <NavItem>
-            <NavLink  to="/Lobby" className="inactive" activeClassName="active">
+            <Link  to={"/Lobby"} className="inactive" activeClassName="active">
             <h3>Lobby</h3>
-            </NavLink>
+            </Link>
         </NavItem>
     </Nav>
 
