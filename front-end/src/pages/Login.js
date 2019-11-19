@@ -5,7 +5,7 @@ export default class Login extends Component {
 	render() {
 		return (
             <div>
-                This is a lobby. 
+                This is a login. 
             </div>
 		)
 	}
