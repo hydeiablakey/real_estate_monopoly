@@ -48,3 +48,19 @@ body {
   padding-right: 10px;
 }
 
+.formLogin, .formSignup {
+
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+
+
+
+}
+
+
+
