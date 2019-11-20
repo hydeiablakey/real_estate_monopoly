@@ -15,7 +15,7 @@ import { Route, Switch } from 'react-router-dom';
 
 function App() {
 	return (
-		<div>
+		<div className="main-container">
 			<Header />
 
 			<Switch>
@@ -24,8 +24,10 @@ function App() {
 				<Route path="/signup" component={Signup} />
 				<Route path="/lobby" component={Lobby} />
 			</Switch>
+			<Footer />
 
 		</div>
+		
 	)
 }
 

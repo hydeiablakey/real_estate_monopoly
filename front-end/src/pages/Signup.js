@@ -5,8 +5,7 @@ export default class Signup extends Component {
 	render() {
 		return (
 			<div className="formSignup">
-			<Container>
-			<Form>
+					<Form>
 				<FormGroup>
 					<Label for="userInput">Username</Label>
 					<Input type="username" name="username" id="signupUsername" placeholder="JohnDoexxx" />
@@ -24,9 +23,10 @@ export default class Signup extends Component {
 					<Input type="password" name="password" id="signupPassword2" placeholder="Re-enter password" />
 				</FormGroup>
 				<Button>Sign up</Button>
-
+				<FormGroup>				<Label for="passwordInput">forgot password? click <a href="#">here</a> to reset</Label></FormGroup>
 				</Form>
-				</Container>
+
+	
 		</div>
 		)
 	}

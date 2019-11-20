@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink as Link } from 'react-router-dom';
 
-import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, NavbarText, NavbarBrand } from 'reactstrap';
 
 export default class Header extends Component {
     constructor(props) {
@@ -23,6 +23,7 @@ export default class Header extends Component {
         return (
             <div>
                 <Navbar color="light" light expand="md">
+                <NavbarBrand href="/">LogsCabin</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="mr-auto" navbar>
