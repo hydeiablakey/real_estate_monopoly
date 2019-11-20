@@ -4,6 +4,7 @@ import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reac
 export default class Signup extends Component {
 	render() {
 		return (
+		<div className="signupContainer">
 			<div className="formSignup">
 					<Form>
 				<FormGroup>
@@ -25,8 +26,7 @@ export default class Signup extends Component {
 				<Button>Sign up</Button>
 				<FormGroup>				<Label for="passwordInput">forgot password? click <a href="#">here</a> to reset</Label></FormGroup>
 				</Form>
-
-	
+			</div>
 		</div>
 		)
 	}

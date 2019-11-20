@@ -49,9 +49,8 @@ Signup.js and Login Styling
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  position: absolute;
-  left: 50%;
-  margin-left: -50px;
+
+
 
 
 }
@@ -61,7 +60,7 @@ Footer.JS Styling
 */
 .footerComponent 
 {
-  position: fixed;
+
   bottom: 0;
   width: 100%;
   background-color: white;
@@ -80,6 +79,11 @@ Footer.JS Styling
 
 .footerContainer {
 padding: 5px;
+}
+
+
+.lobbyContainer, .gameContainer, .loginContainer, .signupContainer {
+  height: 100vh;
 }
 
 

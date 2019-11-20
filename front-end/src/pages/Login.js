@@ -5,6 +5,7 @@ import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reac
 export default class Login extends Component {
 	render() {
 		return (
+		<div className="loginContainer">
 		<div className="formLogin">
 		  <Container>
 			<Form className="formLoginElement">
@@ -19,6 +20,7 @@ export default class Login extends Component {
 				<Button>Login</Button>
 			</Form>
 		   </Container>
+		</div>
 		</div>
 
 		)
