@@ -1,9 +1,20 @@
+import os
 from flask import Flask
 from flask_socketio import SocketIO, send
+from flask_sqlalchemy import SQLAlchemy
+from models import Book
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
+
+# Database config
+app.config.from_object(os.environ['APP_SETTINGS'])
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+#-----------------------------------------------------
+
+
 
 socketio = SocketIO(app, cors_allowed_origins="*")
 
