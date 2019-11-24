@@ -8,8 +8,8 @@
 - If you have trouble visit: https://docs.python.org/3/tutorial/venv.html
 
 - **Install all the required packages:**
-  -  pip install flask-socketio 
-  -  pip install Flask
+  -  ```pip install flask-socketio```
+  -  ```pip install Flask```
 
 
 ## Running the server

@@ -11,7 +11,7 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 def handle_message(message):
     print('received message: ' + message)
     #Send this message to everyone connected to the server
-    send(message, broadcast=True)
+    send("server-recieve: "+message, broadcast=True)
 
 if __name__ == '__main__':
     socketio.run(app)
