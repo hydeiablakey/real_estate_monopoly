@@ -14,3 +14,16 @@
 ## Running the server
 - ```python server.py```
 - Server will be running on http://127.0.0.1:5000/
+
+
+## Tutorials
+https://medium.com/@dushan14/create-a-web-application-with-python-flask-postgresql-and-deploy-on-heroku-243d548335cc  
+
+
+## Database Migration
+First run: ```python manage.py db init```  
+This will create a folder named migrations in our project folder. To migrate using these created files,   
+run ```python manage.py db migrate```
+
+Now apply the migrations to the database using  
+```python manage.py db upgrade```
