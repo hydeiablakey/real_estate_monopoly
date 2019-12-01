@@ -2,6 +2,7 @@
 from server import db
 from sqlalchemy import ForeignKey, UniqueConstraint
 from sqlalchemy.orm import relationship
+from properties import properties
 
 
 class Users(db.Model):
@@ -104,7 +105,7 @@ class Properties(db.Model):
     players = relationship('Players', foreign_keys='Properties.owner_id')
     games = relationship('Games', foreign_keys='Properties.game_id')
 
-    def __init__(self, name, address, p_type, is_mortgaged, mortgage_price, price, rent_price, upgrade_price, level):
+    def __init__(self, name=None, address=None, price=0, rent_price=0, upgrade_price=0, p_type=None, is_mortgaged=False, mortgage_price=0, level=0):
         self.name = name
         self.address = address
         self.p_type = p_type
@@ -132,3 +133,16 @@ class Properties(db.Model):
             'owner_id': self.owner_id,
             'game_id': self.game_id
         }
+
+# for prop in properties:
+#     proper = Properties(
+#         prop['name'], 
+#         prop['address'],
+#         prop['price'],
+#         prop['rent'],
+#         prop['upgrade']
+#     )
+
+#     db.session.add(proper)
+
+# db.session.commit()

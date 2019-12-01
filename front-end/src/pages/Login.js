@@ -17,7 +17,7 @@ export default class Login extends Component {
 					<Label for="passwordInput">Password</Label>
 					<Input type="password" name="password" id="userPassword" placeholder="Enter Password" />
 				</FormGroup>
-				<Button>Login</Button>
+				<Button onClick={this.props.handle_login}>Login</Button>
 			</Form>
 		   </Container>
 		</div>

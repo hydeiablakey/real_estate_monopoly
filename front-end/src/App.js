@@ -21,19 +21,50 @@ class App extends React.Component {
 
   componentDidMount() {
     this.socket = openSocket("http://127.0.0.1:5000");
+    
     this.socket.on("connect", () => console.log("server is connected"));
-    this.socket.emit("message", "how are you?");
-    this.socket.on("message", msg => console.log(msg));
+    this.socket.on("message", response => console.log(response));
+
+    this.socket.on("loginResponse", response => {
+         if(response.status < 300){
+           this.setState({user: response.user})
+          alert('Success')
+         }else{
+           alert('Error Login')
+         }
+    });
+    
+    this.socket.on("registerResponse", response => {
+
+    });
+    
+    //this.socket.emit("message", "how are you?");
+    //this.socket.emit("login", {user_name:"jose", password:"123"});
+  }
+
+  handle_login = (e)=>{
+    e.preventDefault()
+    const userName = document.getElementById('userName').value.trim();
+    const password = document.getElementById('userPassword').value.trim();
+    
+    this.socket.emit("login", {user_name: userName, password});
   }
 
   render() {
+
+    const LogInComponent = () => (
+      <Login
+        handle_login={this.handle_login}
+      />
+    );
+
     return (
       <div className="main-container">
         <Header />
 
         <Switch>
           <Route exact path="/" component={Game} />
-          <Route path="/login" component={Login} />
+          <Route path="/login" component={LogInComponent} />
           <Route path="/signup" component={Signup} />
           <Route path="/lobby" component={Lobby} />
         </Switch>
