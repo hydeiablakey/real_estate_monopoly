@@ -1,0 +1,52 @@
+
+
+
+.loginTitle {
+  font-size: 1.5em;
+  color: #4d2d81;
+  font-family: 'Lato';
+  font-weight: bold;
+
+}
+
+.loginContainer {
+  display:flex; 
+  justify-content: center;
+  padding: 100px;
+  height: 100vh;
+
+
+
+}
+
+.formLogin {
+  padding: 20px 30px 20px;
+  border: 2px solid;
+  margin-bottom: -5px;
+  width: 40%;
+  height: 560px;
+  background-color: white;
+  -webkit-box-shadow: 2px 4px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 4px 25px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 4px 25px 0px rgba(0,0,0,0.75);
+
+}
+
+.passwordInput {
+  padding: 5px;
+  margin: 8px;
+  text-align:center;
+}
+
+.loginButton {
+  display: block;
+  width: 100%;
+}
+
+.signuplinkContainer {
+  display: flex;
+  justify-content: flex-end;
+
+
+ 
+  }

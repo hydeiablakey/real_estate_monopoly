@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import './style/Footer.css';
 
 
 export default class Footer extends Component {

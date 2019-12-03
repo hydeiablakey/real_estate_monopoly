@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import '../style/Signup.css';
 
 export default class Signup extends Component {
 	render() {
 		return (
 		<div className="signupContainer">
 			<div className="formSignup">
-					<Form>
+			 <Form>
+			 <Label className="signupTitle">Sign up</Label>
 				<FormGroup>
 					<Label for="userInput">Username</Label>
 					<Input type="username" name="username" id="signupUsername" placeholder="JohnDoexxx" />
@@ -23,8 +25,9 @@ export default class Signup extends Component {
 					<Label for="passwordInput">Confirm password</Label>
 					<Input type="password" name="password" id="signupPassword2" placeholder="Re-enter password" />
 				</FormGroup>
-				<Button>Sign up</Button>
-				<FormGroup>				<Label for="passwordInput">forgot password? click <a href="#">here</a> to reset</Label></FormGroup>
+				<Button className="signupButton">Sign up</Button>
+				<FormGroup>				
+					<Label className="passwordInput" for="forgotpwd">forgot password? click <a href="#">here</a> to reset</Label></FormGroup>
 				</Form>
 			</div>
 		</div>

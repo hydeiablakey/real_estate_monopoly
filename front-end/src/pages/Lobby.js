@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../style/Lobby.css';
 
 
 export default class Lobby extends Component {

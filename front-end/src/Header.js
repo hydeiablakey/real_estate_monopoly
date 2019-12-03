@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink as Link } from 'react-router-dom';
-
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, NavbarText, NavbarBrand } from 'reactstrap';
+import './style/Header.css';
 
 export default class Header extends Component {
     constructor(props) {
@@ -42,8 +42,6 @@ export default class Header extends Component {
                             <NavItem>
                                 <NavLink tag={Link} to="/lobby"> Lobby </NavLink>
                             </NavItem>
-
-
                         </Nav>
 
                     </Collapse>

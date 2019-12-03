@@ -3,7 +3,7 @@ Game.js will act as homepage
 
 */
 import React from 'react';
-import './App.css';
+import './style/App.css';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Signup from './pages/Signup.js';
