@@ -32,13 +32,19 @@
 
 }
 
-.passwordInput {
-  padding: 5px;
-  margin: 8px;
-  text-align:center;
+
+.memberContainer {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .signupButton {
   display: block;
   width: 100%;
+  background-color: black !important;
+  opacity: 0.8;
+}
+
+.signupButton:hover {
+  opacity: 1;
 }

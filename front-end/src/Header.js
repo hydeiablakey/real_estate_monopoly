@@ -22,11 +22,11 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                <Navbar color="light" light expand="md">
+                <Navbar className="navigation" color="light" light expand="md">
                 <NavbarBrand href="/">LogsCabin</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="mr-auto" navbar>
+                        <Nav navbar>
                             <NavItem>
                                 <NavLink tag={Link} exact to="/"> Home </NavLink>
                             </NavItem>
@@ -37,10 +37,6 @@ export default class Header extends Component {
 
                             <NavItem>
                                 <NavLink tag={Link} to="/signup"> Signup </NavLink>
-                            </NavItem>
-
-                            <NavItem>
-                                <NavLink tag={Link} to="/lobby"> Lobby </NavLink>
                             </NavItem>
                         </Nav>
 

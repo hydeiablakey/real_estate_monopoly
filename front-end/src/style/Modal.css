@@ -1,0 +1,10 @@
+.ruleButton {
+    float: left;
+    margin: 3px;
+    background-color: #4d2d81 !important;
+    opacity: 0.9;
+    font-family: 'Roboto';
+}
+.ruleButton:hover {
+    opacity: 1;
+}

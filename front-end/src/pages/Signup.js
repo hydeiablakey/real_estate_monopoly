@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import '../style/Signup.css';
+import { NavLink as Link } from 'react-router-dom';
+import { NavLink } from 'reactstrap';
+import ModalComponent from '../Modal.js';
 
 export default class Signup extends Component {
 	render() {
@@ -26,8 +29,13 @@ export default class Signup extends Component {
 					<Input type="password" name="password" id="signupPassword2" placeholder="Re-enter password" />
 				</FormGroup>
 				<Button className="signupButton">Sign up</Button>
-				<FormGroup>				
-					<Label className="passwordInput" for="forgotpwd">forgot password? click <a href="#">here</a> to reset</Label></FormGroup>
+				<ModalComponent />
+
+					<Label className="memberContainer">
+					
+					<NavLink tag={Link} to="/login"> Already a member? Login here </NavLink>
+
+					 </Label>
 				</Form>
 			</div>
 		</div>

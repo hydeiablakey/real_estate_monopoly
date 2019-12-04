@@ -10,6 +10,7 @@ import Signup from './pages/Signup.js';
 import Login from './pages/Login.js';
 import Game from './pages/Game.js';
 import Lobby from './pages/Lobby.js';
+import Choice from './pages/Choice.js';
 import { Route, Switch } from 'react-router-dom';
 
 
@@ -19,9 +20,11 @@ function App() {
 			<Header />
 
 			<Switch>
-				<Route exact path="/" component={Game} />
+				<Route exact path="/" component={Login} />
 				<Route path="/login" component={Login} />
 				<Route path="/signup" component={Signup} />
+				<Route path="/choice" component={Choice} />
+				<Route path="/game" component={Game} />
 				<Route path="/lobby" component={Lobby} />
 			</Switch>
 			<Footer />

@@ -4,13 +4,12 @@ Needs editing
 
 html {
 min-height: 100%;
- 
-
 }
+
 body {
   margin: 0;
   height: 100%;
-  background: #355C7D;
+  background-color: white;
   animation: bg-change 10s infinite;
   -webkit-animation: bg-change 10s infinite;
   font-family: 'Lato', sans-serif;

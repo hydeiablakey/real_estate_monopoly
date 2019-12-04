@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText, NavLink } from 'reactstrap';
 import '../style/Login.css';
-
+import { NavLink as Link } from 'react-router-dom';
+import ModalComponent from '../Modal.js';
 
 export default class Login extends Component {
 	render() {
@@ -15,14 +16,19 @@ export default class Login extends Component {
 										<Label for="userInput">Username</Label>
 										<Input className="userLogin" type="username" name="username" id="userName" placeholder="Enter Username" />
 								</FormGroup>
+
 								<FormGroup>
 										<Label for="passwordInput">Password</Label>
 										<Input type="password" name="password" id="userPassword" placeholder="Enter Password" />
 								</FormGroup>
+								 
 									<Button className="loginButton">Login</Button>
+									<ModalComponent />
 
 								<div className="signuplinkContainer">
-								       <Label className="signupLink">Not a member? <a href="#">Sign up here</a></Label>
+								       <Label className="signupLink">
+										<NavLink tag={Link} to="/signup"> Not a member? Sign up here </NavLink>
+									   </Label>
 								</div>
 					</Form>
 

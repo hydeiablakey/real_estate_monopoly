@@ -32,15 +32,17 @@
 
 }
 
-.passwordInput {
-  padding: 5px;
-  margin: 8px;
-  text-align:center;
-}
 
 .loginButton {
   display: block;
   width: 100%;
+  background-color: black !important;
+  opacity: 0.8;
+}
+
+.loginButton:hover {
+opacity: 1;
+
 }
 
 .signuplinkContainer {
