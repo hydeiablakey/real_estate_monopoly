@@ -22,21 +22,21 @@ export default class Header extends Component {
     render() {
         return (
             <div>
-                <Navbar className="navigation" color="light" light expand="md">
+                <Navbar className="mx-auto navigation" color="light" light expand="md">
                 <NavbarBrand href="/">LogsCabin</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
                             <NavItem>
-                                <NavLink tag={Link} exact to="/"> Home </NavLink>
+                                <NavLink tag={Link} exact to="/" className="inactive" activeClassName="active"> Home </NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/login"> Login </NavLink>
+                                <NavLink tag={Link} to="/login" className="inactive" activeClassName="active"> Login </NavLink>
                             </NavItem>
 
                             <NavItem>
-                                <NavLink tag={Link} to="/signup"> Signup </NavLink>
+                                <NavLink tag={Link} to="/signup" className="inactive" activeClassName="active"> Signup </NavLink>
                             </NavItem>
                         </Nav>
 

@@ -1,3 +1,13 @@
 .navigation {
     border: 1px solid;
 }
+
+.inactive {
+    color: black;
+}
+.inactive:hover {
+    color:  #4d2d81 !important;
+}
+.active {
+    color:  #4d2d81;
+}
