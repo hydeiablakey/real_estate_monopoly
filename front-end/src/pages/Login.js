@@ -13,7 +13,6 @@ export default class Login extends Component {
 		}
 		return (
 		<div className="loginContainer">
-<<<<<<< HEAD
 			<div className="formLogin">
 					<Form className="formLoginElement">
 						<Label className="loginTitle" for="loginTitle">Login</Label>
@@ -39,23 +38,6 @@ export default class Login extends Component {
 					</Form>
 
 			</div>
-=======
-		<div className="formLogin">
-		  <Container>
-			<Form className="formLoginElement">
-				<FormGroup>
-					<Label for="userInput">Username</Label>
-					<Input type="username" name="username" id="userName" placeholder="Enter Username" />
-				</FormGroup>
-				<FormGroup>
-					<Label for="passwordInput">Password</Label>
-					<Input type="password" name="password" id="userPassword" placeholder="Enter Password" />
-				</FormGroup>
-				<Button onClick={this.props.handle_login}>Login</Button>
-			</Form>
-		   </Container>
-		</div>
->>>>>>> connecting-socket.io-client
 		</div>
 
 		)

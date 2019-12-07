@@ -4,7 +4,6 @@ Game.js will act as homepage
 */
 import React from "react";
 import "./style/App.css";
-import "./App.css";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import Signup from "./pages/Signup.js";
@@ -66,48 +65,7 @@ class App extends React.Component {
 
     const LobbyWrapper = () => <Lobby redirect={redirect} startGame={this.startGame} />;
 
-    this.socket = null;
-  }
-
-  componentDidMount() {
-    this.socket = openSocket("http://127.0.0.1:5000");
-    
-    this.socket.on("connect", () => console.log("server is connected"));
-    this.socket.on("message", response => console.log(response));
-
-    this.socket.on("loginResponse", response => {
-         if(response.status < 300){
-           this.setState({user: response.user})
-          alert('Success')
-         }else{
-           alert('Error Login')
-         }
-    });
-    
-    this.socket.on("registerResponse", response => {
-
-    });
-    
-    //this.socket.emit("message", "how are you?");
-    //this.socket.emit("login", {user_name:"jose", password:"123"});
-  }
-
-  handle_login = (e)=>{
-    e.preventDefault()
-    const userName = document.getElementById('userName').value.trim();
-    const password = document.getElementById('userPassword').value.trim();
-    
-    this.socket.emit("login", {user_name: userName, password});
-  }
-
-  render() {
-
-    const LogInComponent = () => (
-      <Login
-        handle_login={this.handle_login}
-      />
-    );
-
+    //this.socket = null;
     return (
       <div className="main-container">
         <Header />
@@ -123,7 +81,32 @@ class App extends React.Component {
         <Footer />
       </div>
     );
+
   }
+
+  // componentDidMount() {
+  //   this.socket = openSocket("http://127.0.0.1:5000");
+    
+  //   this.socket.on("connect", () => console.log("server is connected"));
+  //   this.socket.on("message", response => console.log(response));
+
+  //   this.socket.on("loginResponse", response => {
+  //        if(response.status < 300){
+  //          this.setState({user: response.user})
+  //         alert('Success')
+  //        }else{
+  //          alert('Error Login')
+  //        }
+  //   });
+    
+  //   this.socket.on("registerResponse", response => {
+
+  //   });
+    
+  //   //this.socket.emit("message", "how are you?");
+  //   //this.socket.emit("login", {user_name:"jose", password:"123"});
+  // }
+
 }
 
 export default App;
