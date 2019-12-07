@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText, NavLink } from 'reactstrap';
 import '../style/Login.css';
 import { NavLink as Link } from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import ModalComponent from '../Modal.js';
 
 export default class Login extends Component {
 	render() {
+		const {redirect} = this.props;
+		if(redirect){
+			return <Redirect to='/choice' />
+		}
 		return (
 		<div className="loginContainer">
 			<div className="formLogin">
@@ -22,7 +27,7 @@ export default class Login extends Component {
 										<Input type="password" name="password" id="userPassword" placeholder="Enter Password" />
 								</FormGroup>
 								 
-									<Button className="loginButton">Login</Button>
+									<Button className="loginButton" onClick={this.props.login}>Login</Button>
 									<ModalComponent />
 
 								<div className="signuplinkContainer">

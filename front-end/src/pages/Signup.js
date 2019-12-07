@@ -4,9 +4,15 @@ import '../style/Signup.css';
 import { NavLink as Link } from 'react-router-dom';
 import { NavLink } from 'reactstrap';
 import ModalComponent from '../Modal.js';
+import {Redirect} from 'react-router-dom';
 
 export default class Signup extends Component {
 	render() {
+		const {redirect} = this.props;
+		if(redirect){
+			return <Redirect to='/login' />
+		}
+
 		return (
 		<div className="signupContainer">
 			<div className="formSignup">
@@ -28,7 +34,7 @@ export default class Signup extends Component {
 					<Label for="passwordInput">Confirm password</Label>
 					<Input type="password" name="password" id="signupPassword2" placeholder="Re-enter password" />
 				</FormGroup>
-				<Button className="signupButton">Sign up</Button>
+				<Button onClick={this.props.signup} className="signupButton">Sign up</Button>
 				<ModalComponent />
 
 					<Label className="memberContainer">
