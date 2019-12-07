@@ -32,6 +32,10 @@ export default class Header extends Component {
                             </NavItem>
 
                             <NavItem>
+                                <NavLink tag={Link} exact to="/about" className="inactive" activeClassName="active"> About </NavLink>
+                            </NavItem>
+
+                            <NavItem>
                                 <NavLink tag={Link} to="/login" className="inactive" activeClassName="active"> Login </NavLink>
                             </NavItem>
 
