@@ -28,11 +28,67 @@ export default class Header extends Component {
     });
   }
 
+  displayLinks = () => {
+    const { login } = this.props;
+
+    if (login) {
+      return [
+        <NavItem>
+          <NavLink
+            tag={Link}
+            to="/choice"
+            className="inactive"
+            activeClassName="active"
+          >
+            Game
+          </NavLink>
+        </NavItem>,
+        <NavItem>
+          <NavLink
+            tag={Link}
+            to="/"
+            className="inactive"
+            activeClassName="active"
+            onClick={this.props.logout}
+          >
+            Logout
+          </NavLink>
+        </NavItem>
+      ];
+    } else {
+      return [
+        <NavItem>
+          <NavLink
+            tag={Link}
+            to="/login"
+            className="inactive"
+            activeClassName="active"
+          >
+            Login
+          </NavLink>
+        </NavItem>,
+
+        <NavItem>
+          <NavLink
+            tag={Link}
+            to="/signup"
+            className="inactive"
+            activeClassName="active"
+          >
+            Signup
+          </NavLink>
+        </NavItem>
+      ];
+    }
+  };
+
   render() {
     return (
       <div>
         <Navbar className="mx-auto navigation" color="light" light expand="md">
-          <NavbarBrand href="/">LogsCabin</NavbarBrand>
+          <NavbarBrand className="website-title" href="/">
+            LogsCabin
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav navbar>
@@ -44,8 +100,7 @@ export default class Header extends Component {
                   className="inactive"
                   activeClassName="active"
                 >
-                  {" "}
-                  Home{" "}
+                  Home
                 </NavLink>
               </NavItem>
 
@@ -57,34 +112,10 @@ export default class Header extends Component {
                   className="inactive"
                   activeClassName="active"
                 >
-                  {" "}
-                  About{" "}
+                  Rules
                 </NavLink>
               </NavItem>
-
-              <NavItem>
-                <NavLink
-                  tag={Link}
-                  to="/login"
-                  className="inactive"
-                  activeClassName="active"
-                >
-                  {" "}
-                  Login{" "}
-                </NavLink>
-              </NavItem>
-
-              <NavItem>
-                <NavLink
-                  tag={Link}
-                  to="/signup"
-                  className="inactive"
-                  activeClassName="active"
-                >
-                  {" "}
-                  Signup{" "}
-                </NavLink>
-              </NavItem>
+              {this.displayLinks()}
             </Nav>
           </Collapse>
         </Navbar>

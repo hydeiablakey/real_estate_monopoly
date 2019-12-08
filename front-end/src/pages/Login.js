@@ -48,10 +48,10 @@ export default class Login extends Component {
               />
             </FormGroup>
 
-            <Button className="loginButton" onClick={this.props.login}>
+            <Button className="loginButton"  onClick={this.props.login}>
               Login
             </Button>
-            <ModalComponent />
+           
 
             <div className="signuplinkContainer">
               <Label className="signupLink">

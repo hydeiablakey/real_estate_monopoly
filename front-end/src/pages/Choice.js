@@ -24,6 +24,7 @@ export default class Choice extends Component {
                 variant="primary"
                 size="lg"
                 block
+                className='startGameButton' 
               >
                 New Game
               </Button>

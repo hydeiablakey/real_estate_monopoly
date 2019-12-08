@@ -39,7 +39,7 @@ class App extends React.Component {
 
   login = e => {
     e.preventDefault();
-    this.setState({ redirect: true });
+    this.setState({ redirect: true, login: true });
   };
 
   signup = e => {
@@ -54,6 +54,10 @@ class App extends React.Component {
   startGame = e => {
     this.setState({ redirect: true, gameStarted: true });
   };
+
+  logout = () => {
+    this.setState({login: false});
+  }
 
   render() {
     const { redirect } = this.state;
@@ -73,13 +77,17 @@ class App extends React.Component {
     );
 
     const LobbyWrapper = () => (
-      <Lobby redirect={redirect} startGame={this.startGame} />
+      <Lobby
+        redirect={redirect}
+        players={this.state.players}
+        startGame={this.startGame}
+      />
     );
 
     //this.socket = null;
     return (
       <div className="main-container">
-        <Header />
+        <Header logout={this.logout} login={this.state.login}/>
 
         <Switch>
           <Route exact path="/" component={LoginWrapper} />

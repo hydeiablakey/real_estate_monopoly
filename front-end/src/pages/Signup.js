@@ -65,7 +65,7 @@ export default class Signup extends Component {
             <Button onClick={this.props.signup} className="signupButton">
               Sign up
             </Button>
-            <ModalComponent />
+            
 
             <Label className="memberContainer">
               <NavLink tag={Link} to="/login">

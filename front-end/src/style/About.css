@@ -1,0 +1,15 @@
+.about-main-container{
+  width: 60%;
+  height: 60vh;
+  margin: 6.4rem auto;
+  margin-bottom: -5px;
+  background-color: #fff;
+  padding: 2rem;
+  -webkit-box-shadow: 2px 4px 25px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 4px 25px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 4px 25px 0px rgba(0,0,0,0.75);
+}
+
+.rulesTitle, .controlsTitle{
+  color: #4d2d81;;
+}
