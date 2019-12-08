@@ -21,7 +21,7 @@ class App extends React.Component {
     this.state = {
       redirect: false,
       login: false,
-      gameStarted:false,
+      gameStarted: false,
       players: [
         { location: 20, number: 1, pawn: "red", score: 0 },
         { location: 20, number: 2, pawn: "blue", score: 0 },
@@ -52,7 +52,7 @@ class App extends React.Component {
   };
 
   startGame = e => {
-    this.setState({ redirect: true, gameStarted:true });
+    this.setState({ redirect: true, gameStarted: true });
   };
 
   render() {
@@ -64,7 +64,9 @@ class App extends React.Component {
       <Signup signup={this.signup} redirect={redirect} />
     );
 
-    const GameWrapper = () => <Game gameStarted={this.state.gameStarted} players={this.state.players}/>;
+    const GameWrapper = () => (
+      <Game gameStarted={this.state.gameStarted} players={this.state.players} />
+    );
 
     const ChoiceWrapper = () => (
       <Choice redirect={redirect} goToLobby={this.goToLobby} />

@@ -72,10 +72,8 @@ class Game extends Component {
             square={this.state.square}
             players={this.state.players}
           />
-        ) : (
-		//   <PlayerSelect startGame={this.startGame} />
-		null
-        )}
+        ) : //   <PlayerSelect startGame={this.startGame} />
+        null}
       </div>
     );
   }

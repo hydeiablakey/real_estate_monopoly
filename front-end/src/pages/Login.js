@@ -1,45 +1,69 @@
-import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText, NavLink } from 'reactstrap';
-import '../style/Login.css';
-import { NavLink as Link } from 'react-router-dom';
-import {Redirect} from 'react-router-dom';
-import ModalComponent from '../Modal.js';
+import React, { Component } from "react";
+import {
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText,
+  NavLink
+} from "reactstrap";
+import "../style/Login.css";
+import { NavLink as Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
+import ModalComponent from "../Modal.js";
 
 export default class Login extends Component {
-	render() {
-		const {redirect} = this.props;
-		if(redirect){
-			return <Redirect to='/choice' />
-		}
-		return (
-		<div className="loginContainer">
-			<div className="formLogin">
-					<Form className="formLoginElement">
-						<Label className="loginTitle" for="loginTitle">Login</Label>
+  render() {
+    const { redirect } = this.props;
+    if (redirect) {
+      return <Redirect to="/choice" />;
+    }
+    return (
+      <div className="loginContainer">
+        <div className="formLogin">
+          <Form className="formLoginElement">
+            <Label className="loginTitle" for="loginTitle">
+              Login
+            </Label>
 
-								<FormGroup>
-										<Label for="userInput">Username</Label>
-										<Input className="userLogin" type="username" name="username" id="userName" placeholder="Enter Username" />
-								</FormGroup>
+            <FormGroup>
+              <Label for="userInput">Username</Label>
+              <Input
+                className="userLogin"
+                type="username"
+                name="username"
+                id="userName"
+                placeholder="Enter Username"
+              />
+            </FormGroup>
 
-								<FormGroup>
-										<Label for="passwordInput">Password</Label>
-										<Input type="password" name="password" id="userPassword" placeholder="Enter Password" />
-								</FormGroup>
-								 
-									<Button className="loginButton" onClick={this.props.login}>Login</Button>
-									<ModalComponent />
+            <FormGroup>
+              <Label for="passwordInput">Password</Label>
+              <Input
+                type="password"
+                name="password"
+                id="userPassword"
+                placeholder="Enter Password"
+              />
+            </FormGroup>
 
-								<div className="signuplinkContainer">
-								       <Label className="signupLink">
-										<NavLink tag={Link} to="/signup"> Not a member? Sign up here </NavLink>
-									   </Label>
-								</div>
-					</Form>
+            <Button className="loginButton" onClick={this.props.login}>
+              Login
+            </Button>
+            <ModalComponent />
 
-			</div>
-		</div>
-
-		)
-	}
+            <div className="signuplinkContainer">
+              <Label className="signupLink">
+                <NavLink tag={Link} to="/signup">
+                  {" "}
+                  Not a member? Sign up here{" "}
+                </NavLink>
+              </Label>
+            </div>
+          </Form>
+        </div>
+      </div>
+    );
+  }
 }

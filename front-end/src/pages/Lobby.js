@@ -12,8 +12,8 @@ export default class Lobby extends Component {
     const { redirect } = this.props;
     if (redirect) {
       return <Redirect to="/game" />;
-	}
-	
+    }
+
     return (
       <div className="lobbyContainer">
         <div className="lobbyGame">
